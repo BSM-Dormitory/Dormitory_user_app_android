@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Fonts {
+class TextFonts {
   static const primaryText = TextStyle(
     color: Colors.black,
     fontSize: 16,
