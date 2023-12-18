@@ -30,7 +30,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: MediaQuery.of(context).size,
-      builder: (BuildContext context, Widget? child) => const MaterialApp(
+      builder: (context, child) => const MaterialApp(
         home: Scaffold(
           body: Center(
             child: Column(
