@@ -19,4 +19,6 @@ class SystemColors {
   static const Color systemOrange = Color(0xFFFE9500);
   // indigo
   static const Color systemIndigo = Color(0xFF5756D5);
+  // gray
+  static const Color systemGray = Color(0xFF8E8D92);
 }
