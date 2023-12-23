@@ -1,4 +1,5 @@
 import 'package:app/ui/widget/calender.dart';
+import 'package:app/ui/widget/text_field.dart';
 import 'package:app/ui/widget/time_picker.dart';
 import 'package:app/utils/theme/colors/colors.dart';
 import 'package:flutter/material.dart';
@@ -77,6 +78,39 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
                         showTimePickerButton(endTime,
                             () => _showEndTimePicker(), "시간선택", context),
                       ],
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 24.h, left: 24.w),
+                    width: 0.8.sw,
+                    child: Text("사유 작성"),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 24.h, left: 48.w, right: 48.w),
+                    child: textArea(context, "외출 사유를 작성해주세요."),
+                  ),
+                  SizedBox(
+                    height: 24.h,
+                  ),
+                  Container(
+                    width: 0.8.sw,
+                    height: 48.0,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                          side: const BorderSide(
+                            color: SystemColors.systemBlue,
+                            width: 1.0,
+                          ),
+                        ),
+                        backgroundColor: SystemColors.systemBlue,
+                      ),
+                      onPressed: () {},
+                      child: Text(
+                        "외출증 요청하기",
+                        style: TextStyle(color: SystemColors.white),
+                      ),
                     ),
                   ),
                 ],
