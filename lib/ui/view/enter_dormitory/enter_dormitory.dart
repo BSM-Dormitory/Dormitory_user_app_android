@@ -62,21 +62,21 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
                     child: const Text("외출 시간"),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 24.h, left: 32.0.w),
+                    margin: EdgeInsets.only(top: 8.0.h, left: 32.0.w),
                     alignment: Alignment.center,
                     child: Center(
                       child: Row(
                         children: [
                           Container(
                             alignment: Alignment.center,
-                            margin: EdgeInsets.only(top: 24.h, left: 40.0.w),
+                            margin: EdgeInsets.only(left: 40.0.w),
                             child: showTimePickerButton(startTime,
                                 () => _showStartTimePicker(), "시간선택", context),
                           ),
                           Container(
                             alignment: Alignment.center,
-                            margin: EdgeInsets.only(
-                                top: 24.h, left: 24.0.w, right: 24.0.w),
+                            margin:
+                                EdgeInsets.only(left: 24.0.w, right: 24.0.w),
                             child: Text(
                               " ~ ",
                               style: TextStyle(
@@ -87,7 +87,7 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
                           ),
                           Container(
                             alignment: Alignment.center,
-                            margin: EdgeInsets.only(top: 24.h, right: 8.0.w),
+                            margin: EdgeInsets.only(right: 8.0.w),
                             child: showTimePickerButton(endTime,
                                 () => _showEndTimePicker(), "시간선택", context),
                           ),
@@ -108,6 +108,7 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
                     height: 24.h,
                   ),
                   Container(
+                    margin: EdgeInsets.only(top: 24.0.h),
                     width: 0.8.sw,
                     height: 48.0,
                     child: ElevatedButton(
