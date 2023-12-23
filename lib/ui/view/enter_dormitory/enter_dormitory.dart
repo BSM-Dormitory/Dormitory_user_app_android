@@ -32,6 +32,8 @@ class EnterDormtiroyPage extends StatefulWidget {
 class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
   TimeOfDay? startTime;
   TimeOfDay? endTime;
+  bool startTimeSelected = false;
+  bool endTimeSelected = false;
 
   @override
   Widget build(BuildContext context) {
@@ -53,41 +55,54 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
             child: Center(
               child: Column(
                 children: <Widget>[
-                  Calendar(),
+                  const Calendar(),
                   Container(
                     margin: EdgeInsets.only(top: 24.h, left: 24.w),
                     width: 0.8.sw,
-                    child: Text("외출 시간"),
+                    child: const Text("외출 시간"),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 24.h, left: 48.w),
-                    child: Row(
-                      children: [
-                        showTimePickerButton(startTime,
-                            () => _showStartTimePicker(), "시간선택", context),
-                        Container(
-                          margin: EdgeInsets.only(left: 40.w, right: 40.w),
-                          child: Text(
-                            " ~ ",
-                            style: TextStyle(
-                              color: SystemColors.black,
-                              fontSize: 24.sp,
+                    margin: EdgeInsets.only(top: 24.h, left: 32.0.w),
+                    alignment: Alignment.center,
+                    child: Center(
+                      child: Row(
+                        children: [
+                          Container(
+                            alignment: Alignment.center,
+                            margin: EdgeInsets.only(top: 24.h, left: 40.0.w),
+                            child: showTimePickerButton(startTime,
+                                () => _showStartTimePicker(), "시간선택", context),
+                          ),
+                          Container(
+                            alignment: Alignment.center,
+                            margin: EdgeInsets.only(
+                                top: 24.h, left: 24.0.w, right: 24.0.w),
+                            child: Text(
+                              " ~ ",
+                              style: TextStyle(
+                                color: SystemColors.black,
+                                fontSize: 24.sp,
+                              ),
                             ),
                           ),
-                        ),
-                        showTimePickerButton(endTime,
-                            () => _showEndTimePicker(), "시간선택", context),
-                      ],
+                          Container(
+                            alignment: Alignment.center,
+                            margin: EdgeInsets.only(top: 24.h, right: 8.0.w),
+                            child: showTimePickerButton(endTime,
+                                () => _showEndTimePicker(), "시간선택", context),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   Container(
                     margin: EdgeInsets.only(top: 24.h, left: 24.w),
                     width: 0.8.sw,
-                    child: Text("사유 작성"),
+                    child: const Text("사유 작성"),
                   ),
                   Container(
                     margin: EdgeInsets.only(top: 24.h, left: 48.w, right: 48.w),
-                    child: textArea(context, "외출 사유를 작성해주세요."),
+                    child: textArea(context, "외출 사유를 구체적으로 작성해주세요."),
                   ),
                   SizedBox(
                     height: 24.h,
@@ -107,7 +122,7 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
                         backgroundColor: SystemColors.systemBlue,
                       ),
                       onPressed: () {},
-                      child: Text(
+                      child: const Text(
                         "외출증 요청하기",
                         style: TextStyle(color: SystemColors.white),
                       ),
@@ -131,6 +146,7 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
     if (pickedTime != null) {
       setState(() {
         startTime = pickedTime; // 선택된 시간 업데이트
+        startTimeSelected = true; // startTimeSelected 변수 업데이트
       });
     }
   }
@@ -144,6 +160,7 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
     if (pickedTime != null) {
       setState(() {
         endTime = pickedTime; // 선택된 시간 업데이트
+        endTimeSelected = true; // endTimeSelected 변수 업데이트
       });
     }
   }

@@ -1,6 +1,5 @@
 import 'package:app/utils/theme/colors/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Widget showTimePickerButton(
   TimeOfDay? pickedTime,
@@ -22,7 +21,7 @@ Widget showTimePickerButton(
     onPressed: onPressed,
     child: Text(
       pickedTime != null ? pickedTime.format(context) : buttonText,
-      style: TextStyle(color: SystemColors.black),
+      style: const TextStyle(color: SystemColors.black),
     ),
   );
 }
