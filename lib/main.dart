@@ -3,15 +3,15 @@ import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key});
+  MyApp({Key? key});
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home: MyHomePage(),
     );
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key});
+  MyHomePage({Key? key});
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -30,9 +30,17 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: MediaQuery.of(context).size,
-      builder: (context, child) => const MaterialApp(
+      builder: (context, child) => MaterialApp(
         home: Scaffold(
-          body: Center(
+          appBar: AppBar(
+            actions: [
+              IconButton(
+                icon: const Icon(Icons.menu),
+                onPressed: () {},
+              ),
+            ],
+          ),
+          body: const Center(
             child: Column(
               children: <Widget>[],
             ),

@@ -19,12 +19,8 @@ class _CalendarState extends State<Calendar> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(
-          height: 0.1.sh,
-        ),
         Container(
           width: 0.8.sw,
-          height: 0.8.sh,
           child: TableCalendar(
             calendarFormat: _calendarFormat,
             focusedDay: _focusedDay,

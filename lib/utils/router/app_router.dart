@@ -4,6 +4,6 @@ import 'package:get/get.dart';
 List<GetPage> routes = [
   GetPage(
     name: '/',
-    page: () => const MyApp(),
+    page: () => MyApp(),
   ),
 ];
