@@ -1,3 +1,4 @@
+import 'package:app/utils/theme/colors/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -33,6 +34,10 @@ class _MyHomePageState extends State<MyHomePage> {
       builder: (context, child) => MaterialApp(
         home: Scaffold(
           appBar: AppBar(
+            leading: const Icon(
+              Icons.arrow_back_ios,
+              color: SystemColors.black,
+            ),
             actions: [
               IconButton(
                 icon: const Icon(Icons.menu),

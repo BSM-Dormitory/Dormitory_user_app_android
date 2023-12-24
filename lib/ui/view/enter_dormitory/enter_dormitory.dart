@@ -42,12 +42,14 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
       builder: (BuildContext context, child) => MaterialApp(
         home: Scaffold(
           appBar: AppBar(
+            leading: const Icon(
+              Icons.arrow_back_ios_new,
+              color: SystemColors.black,
+            ),
             actions: [
               IconButton(
                 icon: const Icon(Icons.menu),
-                onPressed: () {
-                  // 메뉴 아이콘을 눌렀을 때 수행할 동작을 여기에 작성합니다.
-                },
+                onPressed: () {},
               ),
             ],
           ),
@@ -57,42 +59,46 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
                 children: <Widget>[
                   const Calendar(),
                   Container(
-                    margin: EdgeInsets.only(top: 24.h, left: 24.w),
+                    margin: EdgeInsets.only(top: 32.h, left: 32.w),
                     width: 0.8.sw,
                     child: const Text("외출 시간"),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 8.0.h, left: 32.0.w),
+                    width: 0.8.sw,
+                    margin: EdgeInsets.only(top: 24.h),
                     alignment: Alignment.center,
-                    child: Center(
-                      child: Row(
-                        children: [
-                          Container(
-                            alignment: Alignment.center,
-                            margin: EdgeInsets.only(left: 40.0.w),
-                            child: showTimePickerButton(startTime,
-                                () => _showStartTimePicker(), "시간선택", context),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          alignment: Alignment.center,
+                          child: showTimePickerButton(
+                            startTime,
+                            () => _showStartTimePicker(),
+                            "시간선택",
+                            context,
                           ),
-                          Container(
-                            alignment: Alignment.center,
-                            margin:
-                                EdgeInsets.only(left: 24.0.w, right: 24.0.w),
-                            child: Text(
-                              " ~ ",
-                              style: TextStyle(
-                                color: SystemColors.black,
-                                fontSize: 24.sp,
-                              ),
+                        ),
+                        Container(
+                          alignment: Alignment.center,
+                          child: Text(
+                            " ~ ",
+                            style: TextStyle(
+                              color: SystemColors.black,
+                              fontSize: 24.sp,
                             ),
                           ),
-                          Container(
-                            alignment: Alignment.center,
-                            margin: EdgeInsets.only(right: 8.0.w),
-                            child: showTimePickerButton(endTime,
-                                () => _showEndTimePicker(), "시간선택", context),
+                        ),
+                        Container(
+                          alignment: Alignment.center,
+                          child: showTimePickerButton(
+                            endTime,
+                            () => _showEndTimePicker(),
+                            "시간선택",
+                            context,
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                   Container(
@@ -101,14 +107,17 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
                     child: const Text("사유 작성"),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 24.h, left: 48.w, right: 48.w),
+                    width: 0.8.sw,
+                    alignment: Alignment.center,
+                    margin: EdgeInsets.only(top: 24.h),
                     child: textArea(context, "외출 사유를 구체적으로 작성해주세요."),
                   ),
                   SizedBox(
                     height: 24.h,
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 24.0.h),
+                    margin: EdgeInsets.only(
+                        top: 24.0.h, left: 24.0.w, right: 24.0.w),
                     width: 0.8.sw,
                     height: 48.0,
                     child: ElevatedButton(
