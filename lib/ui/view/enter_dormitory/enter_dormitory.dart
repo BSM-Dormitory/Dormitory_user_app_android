@@ -58,9 +58,32 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
             child: Center(
               child: Column(
                 children: <Widget>[
-                  const Calendar(),
                   Container(
-                    margin: EdgeInsets.only(top: 32.h, left: 32.w),
+                    width: 100.sw,
+                    height: 0.3.sh,
+                    decoration: const BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                        colors: [
+                          Color(0xFF007AFE),
+                          Color(0xFF5856D6),
+                        ],
+                      ),
+                    ),
+                    clipBehavior: Clip.none, // 오버플로우 허용
+                    child: const OverflowBox(
+                      alignment: Alignment.center,
+                      maxHeight: double.infinity,
+                      maxWidth: double.infinity,
+                      child: Calendar(),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 144.0.h,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 24.0.h, left: 16.0.w),
                     width: 0.8.sw,
                     child: const Text("외출 시간"),
                   ),
@@ -111,7 +134,7 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 32.0.h, left: 32.0.w),
+                    margin: EdgeInsets.only(top: 24.0.h, left: 16.0.w),
                     width: 0.8.sw,
                     child: const Text("사유 작성"),
                   ),
@@ -126,7 +149,10 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
                   ),
                   Container(
                     margin: EdgeInsets.only(
-                        top: 24.0.h, left: 24.0.w, right: 24.0.w),
+                      top: 24.0.h,
+                      left: 24.0.w,
+                      right: 24.0.w,
+                    ),
                     width: 0.8.sw,
                     height: 48.0,
                     child: ElevatedButton(
