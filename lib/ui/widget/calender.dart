@@ -20,14 +20,9 @@ class _CalendarState extends State<Calendar> {
     return Column(
       children: [
         Container(
-          margin: EdgeInsets.only(
-            top: 0.16.sh,
-          ),
-        ),
-        Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15.0),
-            color: Color(0xFFF4F4F4),
+            color: const Color(0xFFF4F4F4),
           ),
           width: 0.8.sw,
           child: Align(

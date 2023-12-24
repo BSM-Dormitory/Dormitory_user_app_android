@@ -1,4 +1,5 @@
 import 'package:app/ui/widget/calender.dart';
+import 'package:app/ui/widget/clipper/clipper.dart';
 import 'package:app/ui/widget/modal.dart';
 import 'package:app/ui/widget/text_field.dart';
 import 'package:app/ui/widget/time_picker.dart';
@@ -45,11 +46,11 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
           appBar: AppBar(
             leading: const Icon(
               Icons.arrow_back_ios_new,
-              color: Color(0xFF3C3C43),
+              color: SystemColors.black,
             ),
             actions: [
               IconButton(
-                icon: const Icon(Icons.menu),
+                icon: const Icon(Icons.menu, color: SystemColors.black),
                 onPressed: () {},
               ),
             ],
@@ -72,27 +73,36 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
                 children: <Widget>[
                   Container(
                     width: 100.sw,
-                    height: 0.3.sh,
-                    decoration: const BoxDecoration(
-                      gradient: LinearGradient(
-                        begin: Alignment.centerLeft,
-                        end: Alignment.centerRight,
-                        colors: [
-                          Color(0xFF007AFE),
-                          Color(0xFF5856D6),
-                        ],
-                      ),
+                    height: 0.4.sh + 20,
+                    child: Stack(
+                      fit: StackFit.expand, // 자식 위젯을 부모의 크기에 맞게 확장
+                      children: [
+                        ClipPath(
+                          clipper: WaveClipper(waveHeight: 30.0),
+                          clipBehavior: Clip.antiAlias,
+                          child: Container(
+                            decoration: const BoxDecoration(
+                              gradient: LinearGradient(
+                                begin: Alignment.centerLeft,
+                                end: Alignment.centerRight,
+                                colors: [
+                                  Color(0xFF007AFE),
+                                  Color(0xFF5856D6),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        const Positioned.fill(
+                          child: Align(
+                            alignment: Alignment.bottomCenter,
+                            child: OverflowBox(
+                              child: Calendar(),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                    clipBehavior: Clip.none,
-                    child: const OverflowBox(
-                      alignment: Alignment.center,
-                      maxHeight: double.infinity,
-                      maxWidth: double.infinity,
-                      child: Calendar(),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 144.0.h,
                   ),
                   Container(
                     margin: EdgeInsets.only(top: 24.0.h, left: 16.0.w),
@@ -186,11 +196,11 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
                             color: SystemColors.systemBlue,
                             strokeWidth: 4.0,
                           ),
-                          Text("외출증 요청이 전송되었습니다"),
+                          const Text("외출증 요청이 전송되었습니다"),
                           "확인",
                         );
 
-                        Future.delayed(Duration(seconds: 2), () {
+                        Future.delayed(const Duration(seconds: 2), () {
                           Navigator.pop(context);
                           Get.toNamed("/");
                         });
