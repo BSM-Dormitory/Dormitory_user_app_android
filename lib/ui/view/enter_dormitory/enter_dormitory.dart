@@ -45,7 +45,7 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
           appBar: AppBar(
             leading: const Icon(
               Icons.arrow_back_ios_new,
-              color: SystemColors.black,
+              color: Color(0xFF3C3C43),
             ),
             actions: [
               IconButton(
@@ -77,6 +77,10 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
                             startTime,
                             () => _showStartTimePicker(),
                             "시간선택",
+                            const Icon(
+                              Icons.access_time,
+                              color: SystemColors.black,
+                            ),
                             context,
                           ),
                         ),
@@ -96,6 +100,10 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
                             endTime,
                             () => _showEndTimePicker(),
                             "시간선택",
+                            const Icon(
+                              Icons.access_time,
+                              color: SystemColors.black,
+                            ),
                             context,
                           ),
                         ),
@@ -136,7 +144,7 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
                         print("modal pop");
                         modal(
                           context,
-                          CircularProgressIndicator(
+                          const CircularProgressIndicator(
                             color: SystemColors.systemBlue,
                             strokeWidth: 4.0,
                           ),
@@ -151,7 +159,11 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
                       },
                       child: const Text(
                         "외출증 요청하기",
-                        style: TextStyle(color: SystemColors.white),
+                        style: TextStyle(
+                          color: SystemColors.white,
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.w700,
+                        ),
                       ),
                     ),
                   ),

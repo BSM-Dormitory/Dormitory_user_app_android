@@ -5,6 +5,7 @@ Widget showTimePickerButton(
   TimeOfDay? pickedTime,
   dynamic Function()? onPressed,
   String buttonText,
+  Icon icon,
   BuildContext context,
 ) {
   return ElevatedButton(
@@ -13,15 +14,20 @@ Widget showTimePickerButton(
         borderRadius: BorderRadius.circular(10.0),
         side: const BorderSide(
           color: SystemColors.black,
-          width: 1.0,
+          width: 0.8,
         ),
       ),
       backgroundColor: SystemColors.white,
     ),
     onPressed: onPressed,
-    child: Text(
-      pickedTime != null ? pickedTime.format(context) : buttonText,
-      style: const TextStyle(color: SystemColors.black),
+    child: Row(
+      children: [
+        icon,
+        Text(
+          pickedTime != null ? pickedTime.format(context) : buttonText,
+          style: const TextStyle(color: SystemColors.black),
+        ),
+      ],
     ),
   );
 }
