@@ -1,4 +1,5 @@
 import 'package:app/ui/widget/calender.dart';
+import 'package:app/ui/widget/modal.dart';
 import 'package:app/ui/widget/text_field.dart';
 import 'package:app/ui/widget/time_picker.dart';
 import 'package:app/utils/theme/colors/colors.dart';
@@ -131,7 +132,23 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
                         ),
                         backgroundColor: SystemColors.systemBlue,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        print("modal pop");
+                        modal(
+                          context,
+                          CircularProgressIndicator(
+                            color: SystemColors.systemBlue,
+                            strokeWidth: 4.0,
+                          ),
+                          Text("외출증 요청이 전송되었습니다"),
+                          "확인",
+                        );
+
+                        Future.delayed(Duration(seconds: 2), () {
+                          Navigator.pop(context);
+                          Get.toNamed("/");
+                        });
+                      },
                       child: const Text(
                         "외출증 요청하기",
                         style: TextStyle(color: SystemColors.white),
