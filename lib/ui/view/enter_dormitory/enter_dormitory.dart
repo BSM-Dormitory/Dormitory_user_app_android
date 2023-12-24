@@ -46,11 +46,11 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
           appBar: AppBar(
             leading: const Icon(
               Icons.arrow_back_ios_new,
-              color: SystemColors.black,
+              color: Color(0xFF3C3C43),
             ),
             actions: [
               IconButton(
-                icon: const Icon(Icons.menu, color: SystemColors.black),
+                icon: const Icon(Icons.menu),
                 onPressed: () {},
               ),
             ],
@@ -73,7 +73,7 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
                 children: <Widget>[
                   Container(
                     width: 100.sw,
-                    height: 0.4.sh + 20,
+                    height: 0.3.sh + 112.4,
                     child: Stack(
                       fit: StackFit.expand, // 자식 위젯을 부모의 크기에 맞게 확장
                       children: [
@@ -96,13 +96,18 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
                         const Positioned.fill(
                           child: Align(
                             alignment: Alignment.bottomCenter,
-                            child: OverflowBox(
+                            child: SizedBox(
+                              width: double.infinity,
+                              height: double.infinity,
                               child: Calendar(),
                             ),
                           ),
                         ),
                       ],
                     ),
+                  ),
+                  SizedBox(
+                    height: 24.h,
                   ),
                   Container(
                     margin: EdgeInsets.only(top: 24.0.h, left: 16.0.w),
@@ -196,11 +201,11 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
                             color: SystemColors.systemBlue,
                             strokeWidth: 4.0,
                           ),
-                          const Text("외출증 요청이 전송되었습니다"),
+                          Text("외출증 요청이 전송되었습니다"),
                           "확인",
                         );
 
-                        Future.delayed(const Duration(seconds: 2), () {
+                        Future.delayed(Duration(seconds: 2), () {
                           Navigator.pop(context);
                           Get.toNamed("/");
                         });
