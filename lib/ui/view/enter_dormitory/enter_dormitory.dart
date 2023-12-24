@@ -53,6 +53,18 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
                 onPressed: () {},
               ),
             ],
+            flexibleSpace: Container(
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  colors: [
+                    Color(0xFF007AFE),
+                    Color(0xFF5856D6),
+                  ],
+                ),
+              ),
+            ),
           ),
           body: SingleChildScrollView(
             child: Center(
@@ -71,7 +83,7 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
                         ],
                       ),
                     ),
-                    clipBehavior: Clip.none, // 오버플로우 허용
+                    clipBehavior: Clip.none,
                     child: const OverflowBox(
                       alignment: Alignment.center,
                       maxHeight: double.infinity,
