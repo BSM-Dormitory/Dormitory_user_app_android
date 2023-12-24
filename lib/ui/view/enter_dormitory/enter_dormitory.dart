@@ -111,7 +111,7 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 24.h, left: 24.w),
+                    margin: EdgeInsets.only(top: 32.0.h, left: 32.0.w),
                     width: 0.8.sw,
                     child: const Text("사유 작성"),
                   ),

@@ -36,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
           appBar: AppBar(
             leading: const Icon(
               Icons.arrow_back_ios,
-              color: Color(0xFF3C3C43),
+              color: SystemColors.black,
             ),
             actions: [
               IconButton(
