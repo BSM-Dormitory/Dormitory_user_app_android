@@ -1,5 +1,4 @@
 import 'package:app/ui/widget/calender.dart';
-import 'package:app/ui/widget/clipper/clipper.dart';
 import 'package:app/ui/widget/modal.dart';
 import 'package:app/ui/widget/text_field.dart';
 import 'package:app/ui/widget/time_picker.dart';
@@ -73,41 +72,37 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
                 children: <Widget>[
                   Container(
                     width: 100.sw,
-                    height: 0.3.sh + 112.4,
+                    height: 0.3.sh,
                     child: Stack(
-                      fit: StackFit.expand, // 자식 위젯을 부모의 크기에 맞게 확장
+                      fit: StackFit.expand,
                       children: [
-                        ClipPath(
-                          clipper: WaveClipper(waveHeight: 30.0),
-                          clipBehavior: Clip.antiAlias,
-                          child: Container(
-                            decoration: const BoxDecoration(
-                              gradient: LinearGradient(
-                                begin: Alignment.centerLeft,
-                                end: Alignment.centerRight,
-                                colors: [
-                                  Color(0xFF007AFE),
-                                  Color(0xFF5856D6),
-                                ],
-                              ),
+                        Container(
+                          decoration: const BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                              colors: [
+                                Color(0xFF007AFE),
+                                Color(0xFF5856D6),
+                              ],
                             ),
                           ),
                         ),
-                        const Positioned.fill(
-                          child: Align(
-                            alignment: Alignment.bottomCenter,
-                            child: SizedBox(
-                              width: double.infinity,
-                              height: double.infinity,
-                              child: Calendar(),
-                            ),
+                        Container(
+                          margin: EdgeInsets.only(top: 16.h),
+                          height: 0.3.sh,
+                          child: const OverflowBox(
+                            alignment: Alignment.topCenter,
+                            maxHeight: double
+                                .infinity, // 자식 위젯의 높이를 최대로 설정하여 Container의 경계를 벗어나도록 함
+                            child: Calendar(),
                           ),
                         ),
                       ],
                     ),
                   ),
                   SizedBox(
-                    height: 24.h,
+                    height: 0.15.sh,
                   ),
                   Container(
                     margin: EdgeInsets.only(top: 24.0.h, left: 16.0.w),
