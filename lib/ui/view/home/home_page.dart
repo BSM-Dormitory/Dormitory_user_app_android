@@ -42,7 +42,7 @@ class MyHome extends StatelessWidget {
               children: <Widget>[
                 Container(
                   width: 100.sw,
-                  height: 0.3.sh,
+                  height: 0.27.sh,
                   child: Stack(
                     fit: StackFit.expand,
                     children: [
@@ -59,7 +59,7 @@ class MyHome extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 200.h),
+                        margin: EdgeInsets.only(top: 160.h),
                         height: 0.4.sh,
                         child: OverflowBox(
                           alignment: Alignment.topCenter,
@@ -117,7 +117,7 @@ class MyHome extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 0.12.sh,
+                  height: 0.1.sh,
                 ),
                 Container(
                   margin: EdgeInsets.only(left: 50.w),

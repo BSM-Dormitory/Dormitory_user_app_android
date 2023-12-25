@@ -78,7 +78,7 @@ class _OutDoorPageState extends State<OutDoorPage> {
                           ),
                         ),
                         Container(
-                          height: 0.3.sh,
+                          height: 0.27.sh,
                           child: const OverflowBox(
                             alignment: Alignment.topCenter,
                             maxHeight: double
