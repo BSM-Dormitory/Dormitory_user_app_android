@@ -7,30 +7,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-void main() {
-  runApp(const EnterDormtiroy());
-}
-
-class EnterDormtiroy extends StatelessWidget {
-  const EnterDormtiroy({Key? key});
+class OutDoorPage extends StatefulWidget {
+  const OutDoorPage({Key? key});
 
   @override
-  Widget build(BuildContext context) {
-    return const GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: EnterDormtiroyPage(),
-    );
-  }
+  _OutDoorPageState createState() => _OutDoorPageState();
 }
 
-class EnterDormtiroyPage extends StatefulWidget {
-  const EnterDormtiroyPage({Key? key});
-
-  @override
-  _EnterDormtiroyPageState createState() => _EnterDormtiroyPageState();
-}
-
-class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
+class _OutDoorPageState extends State<OutDoorPage> {
   TimeOfDay? startTime;
   TimeOfDay? endTime;
   bool startTimeSelected = false;
@@ -43,9 +27,14 @@ class _EnterDormtiroyPageState extends State<EnterDormtiroyPage> {
       builder: (BuildContext context, child) => MaterialApp(
         home: Scaffold(
           appBar: AppBar(
-            leading: const Icon(
-              Icons.arrow_back_ios_new,
-              color: Color(0xFF3C3C43),
+            leading: GestureDetector(
+              onTap: () {
+                Get.back();
+              },
+              child: Icon(
+                Icons.arrow_back_ios_new,
+                color: Color(0xFF3C3C43),
+              ),
             ),
             actions: [
               IconButton(

@@ -1,14 +1,14 @@
-import 'package:app/main.dart';
-import 'package:app/ui/view/enter_dormitory/enter_dormitory.dart';
+import 'package:app/ui/view/outdoor/outdoor.dart';
+import 'package:app/ui/view/home/home_page.dart';
 import 'package:get/get.dart';
 
-List<GetPage> routes = [
+List<GetPage> AppRouter = [
   GetPage(
     name: '/',
-    page: () => MyApp(),
+    page: () => MyHome(),
   ),
   GetPage(
-    name: '/enter',
-    page: () => EnterDormtiroy(), // 'EnterDormtiroy' -> 'EnterDormitory'로 수정
+    name: '/outdoor',
+    page: () => OutDoorPage(),
   ),
 ];
