@@ -185,11 +185,11 @@ class _OutDoorPageState extends State<OutDoorPage> {
                             color: SystemColors.systemBlue,
                             strokeWidth: 4.0,
                           ),
-                          Text("외출증 요청이 전송되었습니다"),
+                          const Text("외출증 요청이 전송되었습니다"),
                           "확인",
                         );
 
-                        Future.delayed(Duration(seconds: 2), () {
+                        Future.delayed(const Duration(seconds: 2), () {
                           Navigator.pop(context);
                           Get.toNamed("/");
                         });
