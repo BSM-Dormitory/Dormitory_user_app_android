@@ -9,6 +9,6 @@ List<GetPage> routes = [
   ),
   GetPage(
     name: '/enter',
-    page: () => EnterDormtiroy(),
+    page: () => EnterDormtiroy(), // 'EnterDormtiroy' -> 'EnterDormitory'로 수정
   ),
 ];

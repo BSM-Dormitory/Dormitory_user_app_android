@@ -30,7 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  get: ^4.0.0
+  get: ^4.0.0 # Get 패키지 버전을 명시적으로 추가
   flutter_screenutil: ^5.9.0
   table_calendar: ^3.0.9
 
@@ -60,7 +60,12 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
+  assets:
+    - assets/bed.png
+    - assets/outdoor.png
+    - assets/experience.png
+    - assets/gohome.png
+    - assets/room.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
