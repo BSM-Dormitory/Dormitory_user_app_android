@@ -24,25 +24,25 @@ class MyHome extends StatelessWidget {
                 onPressed: () {},
               ),
             ],
-            flexibleSpace: Container(
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.centerLeft,
-                  end: Alignment.centerRight,
-                  colors: [
-                    Color(0xFF007AFE),
-                    Color(0xFF5856D6),
-                  ],
-                ),
-              ),
-            ),
+            // flexibleSpace: Container(
+            //   decoration: const BoxDecoration(
+            //     gradient: LinearGradient(
+            //       begin: Alignment.centerLeft,
+            //       end: Alignment.centerRight,
+            //       colors: [
+            //         Color(0xFF007AFE),
+            //         Color(0xFF5856D6),
+            //       ],
+            //     ),
+            //   ),
+            // ),
           ),
           body: Center(
             child: Column(
               children: <Widget>[
                 Container(
                   width: 100.sw,
-                  height: 0.27.sh,
+                  height: 0.3.sh,
                   child: Stack(
                     fit: StackFit.expand,
                     children: [
@@ -59,8 +59,8 @@ class MyHome extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 160.h),
-                        height: 0.4.sh,
+                        margin: EdgeInsets.only(top: 200.h),
+                        height: 0.5.sh,
                         child: OverflowBox(
                           alignment: Alignment.topCenter,
                           maxHeight: double
@@ -77,16 +77,16 @@ class MyHome extends StatelessWidget {
                                   boxShadow: [
                                     BoxShadow(
                                       color: SystemColors.systemBlue
-                                          .withOpacity(0.5),
+                                          .withOpacity(0.2),
                                       spreadRadius: 2,
                                       blurRadius: 7,
                                       offset:
-                                          const Offset(0, 0), // 아래쪽으로 그림자 위치 조정
+                                          const Offset(0, 5), // 아래쪽으로 그림자 위치 조정
                                     ),
                                   ],
                                 ),
                                 child: Container(
-                                  width: 0.6.sw,
+                                  width: 0.62.sw,
                                   alignment: Alignment.center,
                                   child: Column(
                                     children: [
@@ -132,10 +132,10 @@ class MyHome extends StatelessWidget {
                           borderRadius: BorderRadius.circular(20.r),
                           boxShadow: [
                             BoxShadow(
-                              color: SystemColors.systemBlue.withOpacity(0.5),
+                              color: SystemColors.systemBlue.withOpacity(0.2),
                               spreadRadius: 2,
                               blurRadius: 7,
-                              offset: const Offset(0, 0), // 아래쪽으로 그림자 위치 조정
+                              offset: const Offset(0, 5), // 아래쪽으로 그림자 위치 조정
                             ),
                           ],
                         ),
@@ -157,10 +157,10 @@ class MyHome extends StatelessWidget {
                           borderRadius: BorderRadius.circular(20.r),
                           boxShadow: [
                             BoxShadow(
-                              color: SystemColors.systemBlue.withOpacity(0.5),
+                              color: SystemColors.systemBlue.withOpacity(0.2),
                               spreadRadius: 2,
                               blurRadius: 7,
-                              offset: const Offset(0, 0), // 아래쪽으로 그림자 위치 조정
+                              offset: const Offset(0, 5), // 아래쪽으로 그림자 위치 조정
                             ),
                           ],
                         ),
@@ -186,10 +186,10 @@ class MyHome extends StatelessWidget {
                           borderRadius: BorderRadius.circular(20.r),
                           boxShadow: [
                             BoxShadow(
-                              color: SystemColors.systemBlue.withOpacity(0.5),
+                              color: SystemColors.systemBlue.withOpacity(0.2),
                               spreadRadius: 2,
                               blurRadius: 7,
-                              offset: const Offset(0, 0), // 아래쪽으로 그림자 위치 조정
+                              offset: const Offset(0, 5), // 아래쪽으로 그림자 위치 조정
                             ),
                           ],
                         ),
@@ -208,10 +208,10 @@ class MyHome extends StatelessWidget {
                           borderRadius: BorderRadius.circular(20.r),
                           boxShadow: [
                             BoxShadow(
-                              color: SystemColors.systemBlue.withOpacity(0.5),
+                              color: SystemColors.systemBlue.withOpacity(0.2),
                               spreadRadius: 2,
                               blurRadius: 7,
-                              offset: const Offset(0, 0), // 아래쪽으로 그림자 위치 조정
+                              offset: const Offset(0, 5), // 아래쪽으로 그림자 위치 조정
                             ),
                           ],
                         ),
