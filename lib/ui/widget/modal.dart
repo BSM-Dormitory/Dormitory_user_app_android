@@ -11,7 +11,12 @@ void modal(
         backgroundColor: SystemColors.white,
         title: title,
         content: Padding(
-          padding: EdgeInsets.all(40), // 모달의 패딩 값을 조정합니다.
+          padding: const EdgeInsets.only(
+            // top: 10,
+            // bottom: 10,
+            left: 24,
+            right: 24,
+          ), // 모달의 패딩 값을 조정합니다.
           child: content,
         ),
         actions: [

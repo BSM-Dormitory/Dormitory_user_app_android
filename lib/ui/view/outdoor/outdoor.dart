@@ -178,17 +178,25 @@ class _OutDoorPageState extends State<OutDoorPage> {
                         backgroundColor: SystemColors.systemBlue,
                       ),
                       onPressed: () {
-                        print("modal pop");
                         modal(
-                          context,
-                          const CircularProgressIndicator(
-                            color: SystemColors.systemBlue,
-                            strokeWidth: 4.0,
-                          ),
-                          const Text("외출증 요청이 전송되었습니다"),
-                          "확인",
-                        );
-
+                            context,
+                            Container(
+                              alignment: Alignment.center,
+                              child: Row(children: [
+                                SizedBox(
+                                  width: 100.w,
+                                ),
+                                const CircularProgressIndicator(
+                                  color: SystemColors.systemBlue,
+                                  strokeWidth: 4.0,
+                                ),
+                                SizedBox(
+                                  width: 100.w,
+                                ),
+                              ]),
+                            ),
+                            const Text("외출증 요청이 전송되었습니다"),
+                            "확인");
                         Future.delayed(const Duration(seconds: 2), () {
                           Navigator.pop(context);
                           Get.toNamed("/");
