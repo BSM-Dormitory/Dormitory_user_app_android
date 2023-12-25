@@ -117,7 +117,7 @@ class MyHome extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 0.1.sh,
+                  height: 0.12.sh,
                 ),
                 Container(
                   margin: EdgeInsets.only(left: 50.w),
@@ -146,7 +146,7 @@ class MyHome extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 0.1.sw,
+                        width: 0.12.sw,
                       ),
                       Container(
                         width: 0.15.sh,
@@ -197,7 +197,7 @@ class MyHome extends StatelessWidget {
                             Image.asset("assets/gohome.png"), () => null),
                       ),
                       SizedBox(
-                        width: 0.1.sw,
+                        width: 0.12.sw,
                       ),
                       Container(
                         width: 0.15.sh,

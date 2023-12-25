@@ -78,7 +78,6 @@ class _OutDoorPageState extends State<OutDoorPage> {
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.only(top: 16.h),
                           height: 0.3.sh,
                           child: const OverflowBox(
                             alignment: Alignment.topCenter,
@@ -94,7 +93,7 @@ class _OutDoorPageState extends State<OutDoorPage> {
                     height: 0.15.sh,
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 16.0.h, left: 16.0.w),
+                    margin: EdgeInsets.only(top: 40.0.h, left: 16.0.w),
                     width: 0.8.sw,
                     child: const Text("외출 시간"),
                   ),
