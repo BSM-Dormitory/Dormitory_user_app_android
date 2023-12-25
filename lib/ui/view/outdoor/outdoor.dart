@@ -94,13 +94,12 @@ class _OutDoorPageState extends State<OutDoorPage> {
                     height: 0.15.sh,
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 24.0.h, left: 16.0.w),
+                    margin: EdgeInsets.only(top: 16.0.h, left: 16.0.w),
                     width: 0.8.sw,
                     child: const Text("외출 시간"),
                   ),
                   Container(
                     width: 0.8.sw,
-                    margin: EdgeInsets.only(top: 24.h),
                     alignment: Alignment.center,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -152,7 +151,7 @@ class _OutDoorPageState extends State<OutDoorPage> {
                   Container(
                     width: 0.8.sw,
                     alignment: Alignment.center,
-                    margin: EdgeInsets.only(top: 24.h),
+                    margin: EdgeInsets.only(top: 8.0.h),
                     child: textArea(context, "외출 사유를 구체적으로 작성해주세요."),
                   ),
                   SizedBox(
