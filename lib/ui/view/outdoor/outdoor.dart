@@ -31,7 +31,7 @@ class _OutDoorPageState extends State<OutDoorPage> {
               onTap: () {
                 Get.back();
               },
-              child: Icon(
+              child: const Icon(
                 Icons.arrow_back_ios_new,
                 color: Color(0xFF3C3C43),
               ),
