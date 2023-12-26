@@ -81,7 +81,7 @@ class MyHome extends StatelessWidget {
                             for (int i = 0; i < 5; i++)
                               Container(
                                 alignment: Alignment.centerLeft,
-                                margin: EdgeInsets.only(bottom: 0.02.sh),
+                                margin: EdgeInsets.only(bottom: 0.01.sh),
                                 width: 0.8.sw,
                                 height: 0.08.sh,
                                 decoration: BoxDecoration(
