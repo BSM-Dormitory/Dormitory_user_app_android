@@ -47,7 +47,36 @@ class MyHome extends StatelessWidget {
                         child: Column(
                           children: [
                             SizedBox(
-                              height: 0.3.sh,
+                              height: 0.1.sh,
+                            ),
+                            Container(
+                              alignment: Alignment.center,
+                              width: 0.8.sw,
+                              child: Center(
+                                child: Column(
+                                  children: [
+                                    SizedBox(
+                                      width: 0.2.sw,
+                                      child:
+                                          Image.asset("assets/main_logo.png"),
+                                    ),
+                                    SizedBox(
+                                      width: 0.02.sw,
+                                    ),
+                                    Text(
+                                      "증명서 발급요청",
+                                      style: TextStyle(
+                                        color: SystemColors.white,
+                                        fontSize: 25.sp,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 0.08.sh,
                             ),
                             for (int i = 0; i < 5; i++)
                               Container(
@@ -76,7 +105,13 @@ class MyHome extends StatelessWidget {
                                       3: Image.asset("assets/gohome.png"),
                                       4: Image.asset("assets/room.png"),
                                     }[i]!,
-                                    () => Get.toNamed("/"),
+                                    {
+                                      0: () => null,
+                                      1: () => Get.toNamed("/outdoor"),
+                                      2: () => null,
+                                      3: () => null,
+                                      4: () => null,
+                                    }[i]!,
                                   ),
                                 ),
                               )
