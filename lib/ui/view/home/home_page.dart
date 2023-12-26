@@ -24,203 +24,68 @@ class MyHome extends StatelessWidget {
                 onPressed: () {},
               ),
             ],
-            // flexibleSpace: Container(
-            //   decoration: const BoxDecoration(
-            //     gradient: LinearGradient(
-            //       begin: Alignment.centerLeft,
-            //       end: Alignment.centerRight,
-            //       colors: [
-            //         Color(0xFF007AFE),
-            //         Color(0xFF5856D6),
-            //       ],
-            //     ),
-            //   ),
-            // ),
           ),
           body: Center(
             child: Column(
               children: <Widget>[
-                Container(
-                  width: 100.sw,
-                  height: 0.3.sh,
-                  child: Stack(
-                    fit: StackFit.expand,
-                    children: [
-                      Container(
-                        decoration: const BoxDecoration(
-                          gradient: LinearGradient(
-                            begin: Alignment.centerLeft,
-                            end: Alignment.centerRight,
-                            colors: [
-                              Color(0xFF007AFE),
-                              Color(0xFF5856D6),
-                            ],
-                          ),
+                Expanded(
+                  child: Container(
+                    width: 100.sw,
+                    height: 100.sh,
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
+                          colors: [
+                            Color(0xFF007AFE),
+                            Color(0xFF5856D6),
+                          ],
                         ),
                       ),
-                      Container(
-                        margin: EdgeInsets.only(top: 200.h),
-                        height: 0.5.sh,
-                        child: OverflowBox(
-                          alignment: Alignment.topCenter,
-                          maxHeight: double
-                              .infinity, // 자식 위젯의 높이를 최대로 설정하여 Container의 경계를 벗어나도록 함
-                          child: Container(
-                            alignment: Alignment.center,
-                            child: Container(
-                                width: 0.75.sw,
-                                height: 0.15.sh,
-                                alignment: Alignment.center,
+                      child: Container(
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: 0.3.sh,
+                            ),
+                            for (int i = 0; i < 5; i++)
+                              Container(
+                                alignment: Alignment.centerLeft,
+                                margin: EdgeInsets.only(bottom: 0.02.sh),
+                                width: 0.8.sw,
+                                height: 0.08.sh,
                                 decoration: BoxDecoration(
                                   color: SystemColors.white,
                                   borderRadius: BorderRadius.circular(20.r),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: SystemColors.systemBlue
-                                          .withOpacity(0.2),
-                                      spreadRadius: 2,
-                                      blurRadius: 7,
-                                      offset:
-                                          const Offset(0, 5), // 아래쪽으로 그림자 위치 조정
-                                    ),
-                                  ],
                                 ),
                                 child: Container(
-                                  width: 0.62.sw,
-                                  alignment: Alignment.center,
-                                  child: Column(
-                                    children: [
-                                      SizedBox(
-                                        height: 10.h,
-                                      ),
-                                      Image.asset(
-                                        "assets/bed.png",
-                                      ),
-                                      const SizedBox(
-                                        height: 10,
-                                      ),
-                                      Text(
-                                        "조기입사",
-                                        style: TextStyle(
-                                          color: SystemColors.black,
-                                          fontSize: 20.sp,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ],
+                                  width: 300.w,
+                                  child: MainWidget(
+                                    {
+                                      0: "조기입사",
+                                      1: "입실증",
+                                      2: "현장체험학습요청서",
+                                      3: "조퇴증",
+                                      4: "이석증",
+                                    }[i]!,
+                                    {
+                                      0: Image.asset("assets/bed.png"),
+                                      1: Image.asset("assets/outdoor.png"),
+                                      2: Image.asset("assets/experience.png"),
+                                      3: Image.asset("assets/gohome.png"),
+                                      4: Image.asset("assets/room.png"),
+                                    }[i]!,
+                                    () => Get.toNamed("/"),
                                   ),
-                                )),
-                          ),
+                                ),
+                              )
+                          ],
                         ),
                       ),
-                    ],
+                    ),
                   ),
-                ),
-                SizedBox(
-                  height: 0.1.sh,
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 50.w),
-                  child: Row(
-                    children: [
-                      Container(
-                        width: 0.15.sh,
-                        height: 0.4.sw,
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                          color: SystemColors.white,
-                          borderRadius: BorderRadius.circular(20.r),
-                          boxShadow: [
-                            BoxShadow(
-                              color: SystemColors.systemBlue.withOpacity(0.2),
-                              spreadRadius: 2,
-                              blurRadius: 7,
-                              offset: const Offset(0, 5), // 아래쪽으로 그림자 위치 조정
-                            ),
-                          ],
-                        ),
-                        child: MainWidget(
-                          "외출증",
-                          Image.asset("assets/outdoor.png"),
-                          () => Get.toNamed("/outdoor"),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 0.12.sw,
-                      ),
-                      Container(
-                        width: 0.15.sh,
-                        height: 0.4.sw,
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                          color: SystemColors.white,
-                          borderRadius: BorderRadius.circular(20.r),
-                          boxShadow: [
-                            BoxShadow(
-                              color: SystemColors.systemBlue.withOpacity(0.2),
-                              spreadRadius: 2,
-                              blurRadius: 7,
-                              offset: const Offset(0, 5), // 아래쪽으로 그림자 위치 조정
-                            ),
-                          ],
-                        ),
-                        child: MainWidget("현장체험학습\n요청서",
-                            Image.asset("assets/experience.png"), () => null),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: 0.03.sh,
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 50.w),
-                  child: Row(
-                    children: [
-                      Container(
-                        width: 0.15.sh,
-                        height: 0.4.sw,
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                          color: SystemColors.white,
-                          borderRadius: BorderRadius.circular(20.r),
-                          boxShadow: [
-                            BoxShadow(
-                              color: SystemColors.systemBlue.withOpacity(0.2),
-                              spreadRadius: 2,
-                              blurRadius: 7,
-                              offset: const Offset(0, 5), // 아래쪽으로 그림자 위치 조정
-                            ),
-                          ],
-                        ),
-                        child: MainWidget("조퇴증",
-                            Image.asset("assets/gohome.png"), () => null),
-                      ),
-                      SizedBox(
-                        width: 0.12.sw,
-                      ),
-                      Container(
-                        width: 0.15.sh,
-                        height: 0.4.sw,
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                          color: SystemColors.white,
-                          borderRadius: BorderRadius.circular(20.r),
-                          boxShadow: [
-                            BoxShadow(
-                              color: SystemColors.systemBlue.withOpacity(0.2),
-                              spreadRadius: 2,
-                              blurRadius: 7,
-                              offset: const Offset(0, 5), // 아래쪽으로 그림자 위치 조정
-                            ),
-                          ],
-                        ),
-                        child: MainWidget(
-                            "이석증", Image.asset("assets/room.png"), () => null),
-                      ),
-                    ],
-                  ),
-                ),
+                )
               ],
             ),
           ),
