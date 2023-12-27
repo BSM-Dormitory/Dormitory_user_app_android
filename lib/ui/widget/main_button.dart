@@ -12,8 +12,8 @@ Widget MainWidget(String title, Widget assets, Function() onTap) {
       child: Row(
         children: [
           assets,
-          SizedBox(
-            height: 16.h,
+          Container(
+            margin: EdgeInsets.only(left: 0.05.sw),
           ),
           Text(
             title,
