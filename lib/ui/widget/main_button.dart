@@ -11,6 +11,9 @@ Widget MainWidget(String title, Widget assets, Function() onTap) {
       height: 0.4.sw,
       child: Row(
         children: [
+          Container(
+            margin: EdgeInsets.only(left: 0.05.sw),
+          ),
           assets,
           Container(
             margin: EdgeInsets.only(left: 0.05.sw),
