@@ -34,14 +34,7 @@ class MyHome extends StatelessWidget {
                     height: 100.sh,
                     child: Container(
                       decoration: const BoxDecoration(
-                        gradient: LinearGradient(
-                          begin: Alignment.centerLeft,
-                          end: Alignment.centerRight,
-                          colors: [
-                            Color(0xFF007AFE),
-                            Color(0xFF5856D6),
-                          ],
-                        ),
+                        color: Color(0xFF007AFF),
                       ),
                       child: Container(
                         child: Column(

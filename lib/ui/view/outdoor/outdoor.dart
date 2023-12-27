@@ -44,14 +44,7 @@ class _OutDoorPageState extends State<OutDoorPage> {
             ],
             flexibleSpace: Container(
               decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.centerLeft,
-                  end: Alignment.centerRight,
-                  colors: [
-                    Color(0xFF007AFE),
-                    Color(0xFF5856D6),
-                  ],
-                ),
+                color: Color(0xFF007AFF),
               ),
             ),
           ),
