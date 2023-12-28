@@ -19,6 +19,8 @@ class _OutDoorPageState extends State<OutDoorPage> {
   TimeOfDay? endTime;
   bool startTimeSelected = false;
   bool endTimeSelected = false;
+  final TextEditingController _textController = TextEditingController();
+  final FocusNode _focusNode = FocusNode();
 
   @override
   Widget build(BuildContext context) {
@@ -143,7 +145,8 @@ class _OutDoorPageState extends State<OutDoorPage> {
                       width: 0.8.sw,
                       alignment: Alignment.center,
                       margin: EdgeInsets.only(top: 8.0.h),
-                      child: textArea(context, "외출 사유를 구체적으로 작성해주세요."),
+                      child: textArea(context, "외출 사유를 구체적으로 작성해주세요.",
+                          _textController, _focusNode),
                     ),
                     SizedBox(
                       height: 24.h,
@@ -186,10 +189,6 @@ class _OutDoorPageState extends State<OutDoorPage> {
                               ),
                               const Text("외출증 요청이 전송되었습니다"),
                               "확인");
-                          Future.delayed(const Duration(seconds: 2), () {
-                            Navigator.pop(context);
-                            Get.toNamed("/");
-                          });
                         },
                         child: const Text(
                           "외출증 요청하기",
