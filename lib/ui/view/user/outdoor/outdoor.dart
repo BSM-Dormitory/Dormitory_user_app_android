@@ -37,7 +37,7 @@ class _OutDoorPageState extends State<OutDoorPage> {
             appBar: AppBar(
               leading: GestureDetector(
                 onTap: () {
-                  Get.back();
+                  Get.toNamed("/user/home");
                 },
                 child: const Icon(
                   Icons.arrow_back_ios_new,

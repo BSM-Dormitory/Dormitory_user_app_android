@@ -23,7 +23,7 @@ void modal(
         actions: [
           ElevatedButton(
             onPressed: () {
-              Get.toNamed("/");
+              Get.toNamed("/user/home");
             },
             child: Container(
               alignment: Alignment.center,

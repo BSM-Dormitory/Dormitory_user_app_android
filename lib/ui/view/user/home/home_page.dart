@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class MyHome extends StatelessWidget {
-  MyHome({Key? key});
+class MyUserHome extends StatelessWidget {
+  MyUserHome({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -100,7 +100,7 @@ class MyHome extends StatelessWidget {
                                     }[i]!,
                                     {
                                       0: () => null,
-                                      1: () => Get.toNamed("/outdoor"),
+                                      1: () => Get.toNamed("/user/outdoor"),
                                       2: () => null,
                                       3: () => null,
                                       4: () => null,
