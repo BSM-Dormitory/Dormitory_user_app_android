@@ -9,11 +9,11 @@ Widget Onboarding(BuildContext context, Widget icon, String text) {
     child: Column(
       children: [
         SizedBox(
-          height: 0.24.sh,
+          height: 80,
         ),
         icon,
         SizedBox(
-          height: 0.07.sh,
+          height: 0.03.sh,
         ),
         Text(
           text,
