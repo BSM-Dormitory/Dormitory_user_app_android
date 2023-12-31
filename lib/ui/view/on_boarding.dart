@@ -47,7 +47,7 @@ class MyHome extends StatelessWidget {
                               height: 0.75.sh,
                               child: Column(
                                 children: [
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 20,
                                   ),
                                   Onboarding(
