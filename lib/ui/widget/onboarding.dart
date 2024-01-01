@@ -8,7 +8,7 @@ Widget Onboarding(BuildContext context, Widget icon, String text) {
   return ScreenUtilInit(
     child: Column(
       children: [
-        SizedBox(
+        const SizedBox(
           height: 80,
         ),
         icon,

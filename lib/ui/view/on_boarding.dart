@@ -2,6 +2,7 @@ import 'package:app/ui/widget/onboarding.dart';
 import 'package:app/utils/theme/colors/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MyHome extends StatelessWidget {
@@ -80,7 +81,9 @@ class MyHome extends StatelessWidget {
                       height: 0.07.sh,
                       child: ElevatedButton(
                         onPressed: () {
-                          _launchURL();
+                          // _launchURL();
+
+                          Get.toNamed("/admin/home");
                         },
                         child: const Text(
                           "BSM으로 로그인하기",

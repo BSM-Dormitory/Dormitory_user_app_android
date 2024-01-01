@@ -1,3 +1,5 @@
+import 'package:app/ui/view/admin/home/admin_home.dart';
+import 'package:app/ui/view/admin/outdoor/list.dart';
 import 'package:app/ui/view/on_boarding.dart';
 import 'package:app/ui/view/user/outdoor/outdoor.dart';
 import 'package:app/ui/view/user/home/home_page.dart';
@@ -16,4 +18,12 @@ List<GetPage> AppRouter = [
     name: '/user/outdoor',
     page: () => OutDoorPage(),
   ),
+  GetPage(
+    name: "/admin/home",
+    page: () => MyAdminHome(),
+  ),
+  GetPage(
+    name: "/admin/outdoor/list",
+    page: () => OutdoorList(),
+  )
 ];
