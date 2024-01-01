@@ -72,7 +72,10 @@ class OutdoorList extends StatelessWidget {
                       children: [
                         outDoorList(context, "2407", "박현준", ListType.allow),
                         outDoorList(context, "0000", "홍길동", ListType.waiting),
-                        outDoorList(context, "9999", "누구세요", ListType.reject),
+                        outDoorList(context, "9999", "길동이", ListType.reject),
+                        outDoorList(context, "0001", "전우치", ListType.allow),
+                        outDoorList(context, "학번임", "이름임", ListType.waiting),
+                        outDoorList(context, "0002", "길똥이", ListType.reject),
                       ],
                     ),
                   )

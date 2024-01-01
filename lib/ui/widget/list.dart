@@ -8,68 +8,65 @@ Widget outDoorList(BuildContext context, sNum, String name, ListType status) {
     child: GestureDetector(
       child: Container(
         margin: EdgeInsets.only(top: 10),
-        width: 0.8.sw,
-        height: 0.1.sh,
+        width: 0.85.sw,
+        height: 0.07.sh,
         alignment: Alignment.center,
         decoration: BoxDecoration(
-          color: SystemColors.white,
+          color: {
+            ListType.allow: SystemColors.systemBlue,
+            ListType.waiting: SystemColors.systemYellow,
+            ListType.reject: SystemColors.systemGray,
+          }[status],
           border: Border.all(
             width: 1,
-            color: SystemColors.systemBlue,
+            color: Colors.transparent,
           ),
+          borderRadius: BorderRadius.circular(10),
         ),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            const SizedBox(
-              width: 20,
-            ),
             Text(
               sNum,
               style: const TextStyle(
-                color: SystemColors.black,
+                color: SystemColors.white,
                 fontSize: 16,
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.w700,
               ),
-            ),
-            const SizedBox(
-              width: 10,
             ),
             Text(
               name,
               style: const TextStyle(
-                color: SystemColors.black,
+                color: SystemColors.white,
                 fontSize: 16,
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.w700,
               ),
-            ),
-            const SizedBox(
-              width: 40,
             ),
             if (status == ListType.allow)
               const Text(
                 "승인",
                 style: TextStyle(
-                  color: SystemColors.black,
+                  color: SystemColors.white,
                   fontSize: 16,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w700,
                 ),
               )
             else if (status == ListType.waiting)
               const Text(
-                "승인대기중",
+                "대기",
                 style: TextStyle(
-                  color: SystemColors.black,
+                  color: SystemColors.white,
                   fontSize: 16,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w700,
                 ),
               )
             else
               const Text(
-                "요청거절",
+                "거절",
                 style: TextStyle(
-                  color: SystemColors.black,
+                  color: SystemColors.white,
                   fontSize: 16,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w700,
                 ),
               )
           ],
