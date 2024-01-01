@@ -2,10 +2,14 @@ import 'package:app/ui/widget/enums/type.dart';
 import 'package:app/utils/theme/colors/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 Widget outDoorList(BuildContext context, sNum, String name, ListType status) {
   return ScreenUtilInit(
     child: GestureDetector(
+      onTap: () {
+        Get.toNamed("/outdoor/$sNum");
+      },
       child: Container(
         margin: EdgeInsets.only(top: 10),
         width: 0.85.sw,
