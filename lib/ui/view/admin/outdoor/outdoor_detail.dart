@@ -8,7 +8,7 @@ import 'package:get/get.dart';
 import '../../../../utils/theme/colors/colors.dart';
 
 class OutdoorDetail extends StatelessWidget {
-  const OutdoorDetail({Key? key});
+  const OutdoorDetail({super.key});
 
   @override
   Widget build(BuildContext context) {

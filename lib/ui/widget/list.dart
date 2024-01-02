@@ -4,11 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-Widget outDoorList(BuildContext context, sNum, String name, ListType status) {
+Widget outDoorList(
+    BuildContext context, String sNum, String name, ListType status) {
   return ScreenUtilInit(
     child: GestureDetector(
       onTap: () {
-        Get.toNamed("/outdoor/$sNum");
+        Get.toNamed("/outdoor/$sNum", arguments: {
+          'sNum': sNum,
+          'name': name,
+        });
       },
       child: Container(
         margin: EdgeInsets.only(top: 10),
