@@ -19,6 +19,7 @@ Widget outDoorList(
         Get.toNamed("/outdoor/$sNum", arguments: {
           'sNum': sNum,
           'name': name,
+          // 시작시간, 끝시간, 사유도 같이 넘겨줘야 함
         });
       },
       child: Container(

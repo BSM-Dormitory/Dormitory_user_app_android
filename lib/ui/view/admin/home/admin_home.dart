@@ -1,4 +1,3 @@
-import 'package:app/ui/view/admin/outdoor/list.dart';
 import 'package:app/ui/widget/main_button.dart';
 import 'package:app/utils/theme/colors/colors.dart';
 import 'package:flutter/material.dart';

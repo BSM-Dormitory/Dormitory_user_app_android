@@ -171,24 +171,27 @@ class _OutDoorPageState extends State<OutDoorPage> {
                         ),
                         onPressed: () {
                           modal(
-                              context,
-                              Container(
-                                alignment: Alignment.center,
-                                child: Row(children: [
-                                  SizedBox(
-                                    width: 100.w,
-                                  ),
-                                  const CircularProgressIndicator(
-                                    color: SystemColors.systemBlue,
-                                    strokeWidth: 4.0,
-                                  ),
-                                  SizedBox(
-                                    width: 100.w,
-                                  ),
-                                ]),
-                              ),
-                              const Text("외출증 요청이 전송되었습니다"),
-                              "확인");
+                            context,
+                            Container(
+                              alignment: Alignment.center,
+                              child: Row(children: [
+                                SizedBox(
+                                  width: 100.w,
+                                ),
+                                const CircularProgressIndicator(
+                                  color: SystemColors.systemBlue,
+                                  strokeWidth: 4.0,
+                                ),
+                                SizedBox(
+                                  width: 100.w,
+                                ),
+                              ]),
+                            ),
+                            const Text("외출증 요청이 전송되었습니다"),
+                            "확인",
+                            SystemColors.systemBlue,
+                            "/user/home",
+                          );
                         },
                         child: const Text(
                           "외출증 요청하기",

@@ -1,5 +1,7 @@
 import 'dart:ui' as ui;
 import 'package:app/ui/widget/list_detail.dart';
+import 'package:app/ui/widget/modal.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -90,14 +92,34 @@ class OutdoorDetail extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
-                      ElevatedButton(
-                        onPressed: () {},
+                      OutlinedButton(
+                        onPressed: () {
+                          // 대충 승인버튼 눌렀을 때 로직 작성
+                          // 데이터베이스에서 승인한 선생님 이름 넣어줘야 함
+                          // 데이터베이스에서 상태를 승인으로 바꿔줘야 함
+                          print("승인");
+                          Get.toNamed("/admin/outdoor/list");
+                        },
                         style: ButtonStyle(
+                          shape: MaterialStateProperty.all(
+                            const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(
+                                    20), // 테두리의 모서리를 0으로 설정하여 네모 모양으로 만듭니다.
+                              ),
+                            ),
+                          ),
+                          side: MaterialStateProperty.all(
+                            const BorderSide(
+                              color: SystemColors.systemBlue, // 테두리 색상을 설정합니다.
+                              width: 2.0, // 테두리 두께를 설정합니다.
+                            ),
+                          ),
                           backgroundColor: MaterialStateProperty.all(
-                            const Color(0xFF007AFF),
+                            SystemColors.systemBlue,
                           ),
                           minimumSize: MaterialStateProperty.all(
-                            ui.Size(0.37.sw, 0.07.sh),
+                            Size(0.37.sw, 0.07.sh),
                           ),
                         ),
                         child: Text(
@@ -105,27 +127,72 @@ class OutdoorDetail extends StatelessWidget {
                           style: TextStyle(
                             color: SystemColors.white,
                             fontSize: 16.sp,
+                            fontWeight: FontWeight.w700,
                           ),
                         ),
                       ),
                       SizedBox(
                         width: 0.02.sw,
                       ),
-                      ElevatedButton(
-                        onPressed: () {},
+                      OutlinedButton(
+                        onPressed: () {
+                          modal(
+                            context,
+                            Text(
+                              "거절사유",
+                              style: TextStyle(
+                                color: SystemColors.black,
+                                fontSize: 16.sp,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                            Container(
+                              width: 1.0.sw,
+                              height: 0.2.sh,
+                              child: CupertinoTextField(
+                                maxLines: 5,
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: SystemColors.systemGray,
+                                    width: 1.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                              ),
+                            ),
+                            "다음",
+                            SystemColors.systemRed,
+                            "/admin/home",
+                          );
+                        },
                         style: ButtonStyle(
+                          shape: MaterialStateProperty.all(
+                            const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(
+                                    20), // 테두리의 모서리를 0으로 설정하여 네모 모양으로 만듭니다.
+                              ),
+                            ),
+                          ),
+                          side: MaterialStateProperty.all(
+                            const BorderSide(
+                              color: Colors.red, // 테두리 색상을 설정합니다.
+                              width: 2.0, // 테두리 두께를 설정합니다.
+                            ),
+                          ),
                           backgroundColor: MaterialStateProperty.all(
-                            const Color.fromARGB(255, 255, 255, 255),
+                            SystemColors.white,
                           ),
                           minimumSize: MaterialStateProperty.all(
-                            ui.Size(0.37.sw, 0.07.sh),
+                            Size(0.37.sw, 0.07.sh),
                           ),
                         ),
                         child: Text(
                           "거절",
                           style: TextStyle(
-                            color: SystemColors.black,
+                            color: SystemColors.systemRed,
                             fontSize: 16.sp,
+                            fontWeight: FontWeight.w700,
                           ),
                         ),
                       ),

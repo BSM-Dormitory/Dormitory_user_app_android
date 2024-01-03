@@ -4,7 +4,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 void modal(
-    BuildContext context, Widget title, Widget content, String confirmText) {
+  BuildContext context,
+  Widget title,
+  Widget content,
+  String confirmText,
+  Color color,
+  String redirect,
+) {
   showDialog(
     context: context,
     builder: (BuildContext context) {
@@ -23,8 +29,16 @@ void modal(
         actions: [
           ElevatedButton(
             onPressed: () {
-              Get.toNamed("/user/home");
+              Get.toNamed(redirect);
             },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: color,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+
+              padding: EdgeInsets.zero, // 내부 여백 제거
+            ),
             child: Container(
               alignment: Alignment.center,
               child: Center(
@@ -37,13 +51,6 @@ void modal(
                   ),
                 ),
               ),
-            ),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: SystemColors.systemBlue,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-              padding: EdgeInsets.zero, // 내부 여백 제거
             ),
           ),
         ],
