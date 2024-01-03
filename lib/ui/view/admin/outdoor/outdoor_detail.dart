@@ -9,6 +9,8 @@ import '../../../../utils/theme/colors/colors.dart';
 
 class OutdoorDetail extends StatelessWidget {
   OutdoorDetail({Key? key});
+  // widget폴더에서 list.dart에 있는 listDetail함수를 가져옴
+  // arguments로 받아온 값
   String sNum = Get.arguments['sNum'];
   String sName = Get.arguments['name'];
 
@@ -77,6 +79,7 @@ class OutdoorDetail extends StatelessWidget {
                   name: sName,
                   date: "2021-09-01",
                   reason: "외출",
+                  // 나중에 시작시간, 끝시간, reason도 인자로 받아야 함
                 ), // 더미데이터임 나중에 데이터베이스에서 가져온 값 넣을 예정
                 SizedBox(
                   height: 0.02.sh,

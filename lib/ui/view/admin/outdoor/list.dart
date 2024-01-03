@@ -70,6 +70,8 @@ class OutdoorList extends StatelessWidget {
                   Container(
                     child: Column(
                       children: [
+                        // 나중에 데이터베이스에서
+                        // 학번, 이름, 상태, 시간(시작, 끝), 사유를 받아와서 넘겨야 함
                         outDoorList(context, "2407", "박현준", ListType.allow),
                         outDoorList(context, "0000", "홍길동", ListType.waiting),
                         outDoorList(context, "9999", "길동이", ListType.reject),

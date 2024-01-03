@@ -5,7 +5,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 Widget outDoorList(
-    BuildContext context, String sNum, String name, ListType status) {
+  // /view/admin/outdoor/list.dart의 outDoorList함수에서 넘겨준 인자
+  BuildContext context,
+  String sNum,
+  String name,
+  ListType status,
+  // 시간(시작, 끝), 사유도 같이 받아야 함
+) {
   return ScreenUtilInit(
     child: GestureDetector(
       onTap: () {

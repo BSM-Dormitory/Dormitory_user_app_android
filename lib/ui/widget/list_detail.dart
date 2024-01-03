@@ -5,7 +5,7 @@ Widget listDetail({
   required BuildContext context,
   required String sNum,
   required String name,
-  required String date,
+  required String date, // 시작시간, 끝시간으로 나눠야 함
   required String reason,
 }) {
   return ScreenUtilInit(
