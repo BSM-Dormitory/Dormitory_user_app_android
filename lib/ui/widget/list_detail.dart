@@ -3,10 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Widget listDetail({
   required BuildContext context,
-  required String id,
+  required String sNum,
   required String name,
-  required String timeRange,
-  required String description,
+  required String date,
+  required String reason,
 }) {
   return ScreenUtilInit(
     child: Column(
@@ -26,7 +26,7 @@ Widget listDetail({
           margin: EdgeInsets.only(left: 0.1.sw),
           alignment: Alignment.bottomLeft,
           child: Text(
-            id + " " + name,
+            sNum + " " + name,
             style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 20.sp,
@@ -51,7 +51,7 @@ Widget listDetail({
           margin: EdgeInsets.only(left: 0.1.sw),
           alignment: Alignment.centerLeft,
           child: Text(
-            timeRange,
+            date,
             style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 20.sp,
@@ -76,7 +76,7 @@ Widget listDetail({
           margin: EdgeInsets.only(left: 0.1.sw),
           alignment: Alignment.centerLeft,
           child: Text(
-            description,
+            "대충 사유",
             style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 20.sp,

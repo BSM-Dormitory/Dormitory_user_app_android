@@ -8,7 +8,9 @@ import 'package:get/get.dart';
 import '../../../../utils/theme/colors/colors.dart';
 
 class OutdoorDetail extends StatelessWidget {
-  const OutdoorDetail({Key? key});
+  OutdoorDetail({Key? key});
+  String sNum = Get.arguments['sNum'];
+  String sName = Get.arguments['name'];
 
   @override
   Widget build(BuildContext context) {
@@ -71,10 +73,10 @@ class OutdoorDetail extends StatelessWidget {
                 ),
                 listDetail(
                   context: context,
-                  id: "2407",
-                  name: "박현준",
-                  timeRange: "12:00 ~ 13:00",
-                  description: "아무튼 이유임",
+                  sNum: sNum,
+                  name: sName,
+                  date: "2021-09-01",
+                  reason: "외출",
                 ), // 더미데이터임 나중에 데이터베이스에서 가져온 값 넣을 예정
                 SizedBox(
                   height: 0.02.sh,

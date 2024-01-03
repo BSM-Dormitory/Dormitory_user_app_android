@@ -9,13 +9,14 @@ Widget outDoorList(
   return ScreenUtilInit(
     child: GestureDetector(
       onTap: () {
+        print("log: $sNum, $name");
         Get.toNamed("/outdoor/$sNum", arguments: {
           'sNum': sNum,
           'name': name,
         });
       },
       child: Container(
-        margin: EdgeInsets.only(top: 10),
+        margin: const EdgeInsets.only(top: 10),
         width: 0.85.sw,
         height: 0.07.sh,
         alignment: Alignment.center,
