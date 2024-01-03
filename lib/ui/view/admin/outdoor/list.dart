@@ -80,7 +80,7 @@ class OutdoorList extends StatelessWidget {
                         outDoorList(context, "0002", "길똥이", ListType.reject),
                       ],
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
