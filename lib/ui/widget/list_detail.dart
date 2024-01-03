@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-Widget listDetail(BuildContext context, String sNum, String name, String date,
-    String reason) {
+Widget listDetail({
+  required BuildContext context,
+  required String id,
+  required String name,
+  required String timeRange,
+  required String description,
+}) {
   return ScreenUtilInit(
     child: Column(
       children: <Widget>[
@@ -21,7 +26,7 @@ Widget listDetail(BuildContext context, String sNum, String name, String date,
           margin: EdgeInsets.only(left: 0.1.sw),
           alignment: Alignment.bottomLeft,
           child: Text(
-            sNum + " " + name,
+            id + " " + name,
             style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 20.sp,
@@ -46,7 +51,7 @@ Widget listDetail(BuildContext context, String sNum, String name, String date,
           margin: EdgeInsets.only(left: 0.1.sw),
           alignment: Alignment.centerLeft,
           child: Text(
-            date,
+            timeRange,
             style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 20.sp,
@@ -71,7 +76,7 @@ Widget listDetail(BuildContext context, String sNum, String name, String date,
           margin: EdgeInsets.only(left: 0.1.sw),
           alignment: Alignment.centerLeft,
           child: Text(
-            reason,
+            description,
             style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 20.sp,

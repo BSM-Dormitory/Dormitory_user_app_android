@@ -17,7 +17,7 @@ List<GetPage> AppRouter = [
   ),
   GetPage(
     name: '/user/outdoor',
-    page: () => OutDoorPage(),
+    page: () => const OutDoorPage(),
   ),
   GetPage(
     name: "/admin/home",
@@ -29,6 +29,6 @@ List<GetPage> AppRouter = [
   ),
   GetPage(
     name: "/outdoor/:id",
-    page: () => OutdoorDetail(),
+    page: () => const OutdoorDetail(),
   ),
 ];
